@@ -1,62 +1,37 @@
-name: JEST API Tests
+name: Run Tests
 
 on:
   push:
-    branches: [master, main]
+    branches: [ master, main ]
   pull_request:
-    branches: [master, main]
+    branches: [ master, main ]
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "18"
-          cache: "npm"
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: "18"
+        cache: "npm"
 
-      - name: Install Dependencies
-        run: npm install
+    - name: Install Dependencies
+      run: npm install
 
-      - name: Run Tests
-        run: |name: Run Tests
-        
-        on:
-          push:
-            branches: [ master, main ]
-          pull_request:
-            branches: [ master, main ]
-        
-        jobs:
-          test:
-            runs-on: ubuntu-latest
-        
-            steps:
-            - uses: actions/checkout@v4
-        
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                node-version: "18"
-                cache: "npm"
-        
-            - name: Install Dependencies
-              run: npm install
-        
-            - name: Run Tests
-              run: |
-                # Set the environment variables for Jest
-                export FCENV=prod
-                # Run tests and generate report
-                npx jest __tests__/ --reporters=default --reporters=jest-stare
-        
-            - name: Upload Test Report
-              uses: actions/upload-artifact@v3
-              with:
-                name: jest-stare-report
-                path: jest-stare-report.html
-                if-no-files-found: error
+    - name: Run Tests
+      run: |
+        # Set the environment variables for Jest
+        export FCENV=prod
+        # Run tests and generate report
+        npx jest __tests__/ --reporters=default --reporters=jest-stare
+
+    - name: Upload Test Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: jest-stare-report
+        path: jest-stare-report.html
+        if-no-files-found: error
