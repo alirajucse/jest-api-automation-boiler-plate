@@ -1,6 +1,6 @@
-# API Automation
+# JEST API Automation
 
-This showcase the JEST capabilities in API Automation
+API Automation using Jest
 
 ### Install necessary packages
 
@@ -11,8 +11,6 @@ npm i
 ### Test Cases Design Guidelines
 
 - Before start please get an idea about how Jest work.You can get an idea from here [Jest Documentation](https://jestjs.io/docs/getting-started)
-- Please follow the best practice to make it easy for the reviewer as well
-  as the contributor
 
 ### Run for different environments (dev, qa1, qa2, preprod, prod)
 
