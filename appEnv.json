@@ -1,0 +1,13 @@
+{
+  "default": "prod",
+  "dev": {
+    "baseUrl": "",
+    "email": "",
+    "password": ""
+  },
+  "prod": {
+    "baseUrl": "https://practice.expandtesting.com/notes/api",
+    "email": "raju-jest@api.com",
+    "password": "p123456789"
+  }
+}
