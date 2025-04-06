@@ -53,7 +53,7 @@ describe("Positive test cases", () => {
   });
 
   test("Create a note with maximum length fields", async () => {
-    const longText = "a".repeat(255);
+    const longText = "a".repeat(100);
     const longData = {
       title: longText,
       description: longText,

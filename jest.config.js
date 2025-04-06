@@ -20,4 +20,5 @@ module.exports = {
   appEnvConfig,
   testTimeout: 100000,
   reporters: ["default", "jest-stare"],
+  maxWorkers: 2
 };
