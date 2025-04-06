@@ -12,7 +12,7 @@ npm i
 
 - Before start please get an idea about how Jest work.You can get an idea from here [Jest Documentation](https://jestjs.io/docs/getting-started)
 
-### Run for different environments (dev, qa1, qa2, preprod, prod)
+### Run for different environments (local, dev, prod)
 
 ```
 # Linux
